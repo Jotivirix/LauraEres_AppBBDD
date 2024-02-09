@@ -77,11 +77,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         LinearLayout mainLayout;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            ID=itemView.findViewById(R.id.ID);
-            Marca_txt = itemView.findViewById(R.id.Marca_txt);
-            Tipo_txt = itemView.findViewById(R.id.Tipo_txt);
-            Caducidad_txt = itemView.findViewById(R.id.Caducidad_txt);
-            Graduacion_txt = itemView.findViewById(R.id.Graduacion_txt);
+            ID=itemView.findViewById(R.id.lentilla_id);
+            Marca_txt = itemView.findViewById(R.id.marca_txt);
+            Tipo_txt = itemView.findViewById(R.id.tipo_txt);
+            Caducidad_txt = itemView.findViewById(R.id.caducidad_txt);
+            Graduacion_txt = itemView.findViewById(R.id.graduacion_txt);
             mainLayout=itemView.findViewById(R.id.mainLayout);
             //Animacion Recyclerview
             animacion = AnimationUtils.loadAnimation(context, R.anim.adaptardor_anim);

@@ -30,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //conectamos las variables con los objetos añadidos en la interfaz
         recyclerView = findViewById(R.id.recylcerView);
-        Actualizar_btn=findViewById(R.id.Actualizar_btn);
+        Actualizar_btn=findViewById(R.id.actualizar_btn);
         lentilla=findViewById(R.id.lentilla);
-
 
         Actualizar_btn.setOnClickListener(new View.OnClickListener() {
             @Override

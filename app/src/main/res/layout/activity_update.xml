@@ -7,7 +7,7 @@
     tools:context=".Lentillas">
 
     <TextView
-        android:id="@+id/Tipo2"
+        android:id="@+id/tipoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Opcion selecionada:"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Caducidad2"
+        android:id="@+id/caducidad2"
         android:layout_width="284dp"
         android:layout_height="43dp"
         android:ems="10"
@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.566" />
 
     <EditText
-        android:id="@+id/Graduacion2"
+        android:id="@+id/graduacion2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.426" />
 
     <Button
-        android:id="@+id/Editar"
+        android:id="@+id/editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Editar"
@@ -85,7 +85,7 @@
         app:layout_constraintVertical_bias="0.918" />
 
     <Button
-        android:id="@+id/Borrar"
+        android:id="@+id/borrar"
         android:layout_width="402dp"
         android:layout_height="47dp"
         android:layout_marginBottom="112dp"
@@ -102,7 +102,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/Marca2"
+        android:id="@+id/marca2"
         android:layout_width="409dp"
         android:layout_height="36dp"
         android:text="CooperVision"
@@ -123,7 +123,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/Caducidad2"
+        app:layout_constraintStart_toStartOf="@+id/caducidad2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.571" />
 
@@ -134,26 +134,26 @@
         android:layout_width="389dp"
         android:layout_height="155dp"
         android:layout_marginTop="192dp"
-        android:defaultFocusHighlightEnabled="@+id/Diaria"
+        android:defaultFocusHighlightEnabled="@+id/diariaButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/Diaria2"
+            android:id="@+id/diaria2Button"
             android:layout_width="414dp"
             android:layout_height="wrap_content"
             android:text="Diaria" />
 
         <RadioButton
-            android:id="@+id/Mensual2"
+            android:id="@+id/mensual2Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mensual" />
 
         <RadioButton
-            android:id="@+id/Anual2"
+            android:id="@+id/anual2Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Anual" />

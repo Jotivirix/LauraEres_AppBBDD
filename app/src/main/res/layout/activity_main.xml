@@ -49,7 +49,7 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Actualizar_btn"
+        android:id="@+id/actualizar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -74,7 +74,7 @@
         app:srcCompat="@drawable/ic_lentilla" />
 
     <TextView
-        android:id="@+id/MisLentillas"
+        android:id="@+id/misLentillas_label"
         android:layout_width="102dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"

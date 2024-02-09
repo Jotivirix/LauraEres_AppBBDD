@@ -31,11 +31,11 @@ public class Activity_update extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
-        Marca2 = findViewById(R.id.Marca2);
-        Tipo2 = findViewById(R.id.Tipo2);
-        Diaria=(RadioButton) findViewById(R.id.Diaria2);
-        Mensual=(RadioButton)findViewById(R.id.Mensual2);
-        Anual = (RadioButton)findViewById(R.id.Anual2);
+        Marca2 = findViewById(R.id.marca2);
+        Tipo2 = findViewById(R.id.tipoLabel);
+        Diaria=(RadioButton) findViewById(R.id.diaria2Button);
+        Mensual=(RadioButton)findViewById(R.id.mensual2Button);
+        Anual = (RadioButton)findViewById(R.id.anual2Button);
 
         //creamos un clicklistener para poder editar las opciones de los radiobutton
         View.OnClickListener list = new View.OnClickListener() {
@@ -59,8 +59,8 @@ public class Activity_update extends AppCompatActivity {
         Mensual.setOnClickListener(list);
         Anual.setOnClickListener(list);
 
-        Caducidad2 = findViewById(R.id.Caducidad2);
-        Editar=findViewById(R.id.Editar);
+        Caducidad2 = findViewById(R.id.caducidad2);
+        Editar=findViewById(R.id.editar);
         getandSetIntentData();
         Editar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +78,7 @@ public class Activity_update extends AppCompatActivity {
                 finish();
             }
         });
-        Borrar=findViewById(R.id.Borrar);
+        Borrar=findViewById(R.id.borrar);
         Borrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +86,7 @@ public class Activity_update extends AppCompatActivity {
             }
         });
 
-        Graduacion2 = findViewById(R.id.Graduacion2);
+        Graduacion2 = findViewById(R.id.graduacion2);
         String[]marcas ={"CooperVision","Alcon","BauchandLomb"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,marcas);
 

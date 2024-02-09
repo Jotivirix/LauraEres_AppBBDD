@@ -28,14 +28,14 @@ public class Lentillas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lentillas);
         //añadimos todos los componentes de la interfaz
-        Marca = findViewById(R.id.Marca);
+        Marca = findViewById(R.id.marca);
         String[]marcas ={"CooperVision","Alcon","BauchandLomb"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,marcas);
         Marca.setAdapter(adapter);
         //creamos los radio button junto con su textview
-       Tipo=findViewById(R.id.Tipo);
-        Caducidad = findViewById(R.id.Caducidad);
-        Graduacion = findViewById(R.id.Graduacion);
+       Tipo=findViewById(R.id.tipo_label);
+        Caducidad = findViewById(R.id.caducidad);
+        Graduacion = findViewById(R.id.graduacion);
         fecha= findViewById(R.id.fecha);
         //Creamos el boton para el caendario
         fecha.setOnClickListener(new View.OnClickListener() {
@@ -59,9 +59,9 @@ public class Lentillas extends AppCompatActivity {
                 }
             }
         });
-        Diaria=(RadioButton) findViewById(R.id.Diaria);
-        Mensual=(RadioButton)findViewById(R.id.Mensual);
-        Anual = (RadioButton)findViewById(R.id.Anual);
+        Diaria=(RadioButton) findViewById(R.id.diariaButton);
+        Mensual=(RadioButton)findViewById(R.id.mensualButton);
+        Anual = (RadioButton)findViewById(R.id.anualButton);
 
         //creamos un clicklistener para poder editar las opciones de los radiobutton
         View.OnClickListener list = new View.OnClickListener() {
