@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MisLentillas_app</string>
+    <string-array name="Marcas">
+        <item>CooperVision</item>
+        <item>Alcon</item>
+        <item>BauchandLomb</item>
+
+    </string-array>
+</resources>
