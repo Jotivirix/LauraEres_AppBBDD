@@ -20,24 +20,24 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     private Context context;
     Activity activity;
-    private ArrayList ID,Marca , Tipo , Caducidad, Graduacion;
+    private ArrayList ID, Marca, Tipo, Caducidad, Graduacion;
     Animation animacion;
 
-    CustomAdapter(Activity activity, Context context , ArrayList ID, ArrayList Marca , ArrayList Tipo , ArrayList Caducidad , ArrayList Graduacion  ){
-        this.activity=activity;
-        this.context=context;
-        this.ID=ID;
-        this.Marca=Marca;
-        this.Tipo=Tipo;
-        this.Caducidad=Caducidad;
-        this.Graduacion=Graduacion;
+    CustomAdapter(Activity activity, Context context, ArrayList ID, ArrayList Marca, ArrayList Tipo, ArrayList Caducidad, ArrayList Graduacion) {
+        this.activity = activity;
+        this.context = context;
+        this.ID = ID;
+        this.Marca = Marca;
+        this.Tipo = Tipo;
+        this.Caducidad = Caducidad;
+        this.Graduacion = Graduacion;
     }
 
     @NonNull
     @Override
     public CustomAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater =LayoutInflater.from(context);
-        View view= inflater.inflate(R.layout.mi_columna,parent,false);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.mi_columna, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -54,14 +54,15 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
 
             //cuando cliquemos en los datos nos dejara modificarlos a los nuevos
-            public void onClick(View v) {;
+            public void onClick(View v) {
+                ;
                 Intent intent = new Intent(context, Activity_update.class);
-                intent.putExtra("ID",String.valueOf(ID.get(position)));
-                intent.putExtra("Marca",String.valueOf(Marca.get(position)));
-                intent.putExtra("Tipo",String.valueOf(Tipo.get(position)));
-                intent.putExtra("Caducidad",String.valueOf(Caducidad.get(position)));
-                intent.putExtra("Graduacion",String.valueOf(Graduacion.get(position)));
-                activity.startActivityForResult(intent,1);
+                intent.putExtra("ID", String.valueOf(ID.get(position)));
+                intent.putExtra("Marca", String.valueOf(Marca.get(position)));
+                intent.putExtra("Tipo", String.valueOf(Tipo.get(position)));
+                intent.putExtra("Caducidad", String.valueOf(Caducidad.get(position)));
+                intent.putExtra("Graduacion", String.valueOf(Graduacion.get(position)));
+                activity.startActivityForResult(intent, 1);
 
             }
         });
@@ -73,16 +74,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView ID, Marca_txt , Tipo_txt , Caducidad_txt , Graduacion_txt;
+        TextView ID, Marca_txt, Tipo_txt, Caducidad_txt, Graduacion_txt;
         LinearLayout mainLayout;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            ID=itemView.findViewById(R.id.lentilla_id);
+            ID = itemView.findViewById(R.id.lentilla_id);
             Marca_txt = itemView.findViewById(R.id.marca_txt);
             Tipo_txt = itemView.findViewById(R.id.tipo_txt);
             Caducidad_txt = itemView.findViewById(R.id.caducidad_txt);
             Graduacion_txt = itemView.findViewById(R.id.graduacion_txt);
-            mainLayout=itemView.findViewById(R.id.mainLayout);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
             //Animacion Recyclerview
             animacion = AnimationUtils.loadAnimation(context, R.anim.adaptardor_anim);
             mainLayout.setAnimation(animacion);

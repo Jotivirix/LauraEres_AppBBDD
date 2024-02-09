@@ -6,131 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".Lentillas">
 
-    <TextView
-        android:id="@+id/tipo_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Opcion selecionada:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="422dp"
-        android:layout_height="89dp"
-        android:layout_marginBottom="644dp"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="404dp"
-        android:layout_height="744dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:text="Datos"
+        android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/caducidad"
-        android:layout_width="284dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:hint="Caducidad"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
-
-    <EditText
-        android:id="@+id/graduacion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:ems="10"
-        android:hint="Graduacion"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
-
-    <Button
-        android:id="@+id/aceptar_boton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Aceptar"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.774" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <Spinner
         android:id="@+id/marca"
         android:layout_width="409dp"
         android:layout_height="36dp"
+        android:layout_marginTop="32dp"
         android:text="CooperVision"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/tipo_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Opcion selecionada:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marca" />
+
+    <EditText
+        android:id="@+id/caducidad"
+        android:layout_width="248dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Caducidad"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/graduacion"
+        android:layout_width="352dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Graduacion"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha" />
+
+    <Button
+        android:id="@+id/aceptar_boton"
+        android:layout_width="295dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:text="Aceptar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/graduacion"
+        tools:layout_editor_absoluteX="58dp" />
 
     <Button
         android:id="@+id/fecha"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="293dp"
-        android:layout_marginEnd="28dp"
+        android:layout_height="44dp"
         android:text="Fecha"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/caducidad"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="107dp"
-        android:layout_height="121dp"
-        app:layout_constraintBottom_toBottomOf="@+id/titulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915"
-        app:srcCompat="@drawable/ic_lentillas" />
+        app:layout_constraintStart_toEndOf="@+id/caducidad"
+        app:layout_constraintTop_toTopOf="@+id/caducidad" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="389dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="192dp"
+        android:layout_width="360dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="16dp"
         android:defaultFocusHighlightEnabled="@+id/diariaButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/tipo_label">
 
         <RadioButton
             android:id="@+id/diariaButton"
@@ -149,7 +128,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Anual" />
+
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="107dp"
+        android:layout_height="121dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aceptar_boton"
+        app:srcCompat="@drawable/ic_lentillas" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
