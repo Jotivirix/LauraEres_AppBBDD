@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MisLentillas_app"
         tools:targetApi="31">
         <activity
-            android:name=".activity_update"
+            android:name=".Activity_update"
             android:exported="false" />
         <activity
-            android:name=".lentillas"
+            android:name=".Lentillas"
             android:exported="false"
             android:label="Lentillas"
             android:parentActivityName=".MainActivity" />

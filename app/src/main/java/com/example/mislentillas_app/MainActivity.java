@@ -8,10 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -48,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Unimos las dos pantallas mendiante el boton añadir con un intent
-                Intent intent = new Intent(MainActivity.this,lentillas.class);
+                Intent intent = new Intent(MainActivity.this, Lentillas.class);
                 startActivity(intent);
 
             }

@@ -55,7 +55,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
             //cuando cliquemos en los datos nos dejara modificarlos a los nuevos
             public void onClick(View v) {;
-                Intent intent = new Intent(context, activity_update.class);
+                Intent intent = new Intent(context, Activity_update.class);
                 intent.putExtra("ID",String.valueOf(ID.get(position)));
                 intent.putExtra("Marca",String.valueOf(Marca.get(position)));
                 intent.putExtra("Tipo",String.valueOf(Tipo.get(position)));

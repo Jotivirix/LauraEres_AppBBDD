@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,7 +19,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class activity_update extends AppCompatActivity {
+public class Activity_update extends AppCompatActivity {
     EditText Caducidad2 , Graduacion2;
     Button Editar ,Borrar ,fecha2;
     TextView Tipo2;
@@ -68,7 +66,7 @@ public class activity_update extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
-                MyDatabaseHelper mydb = new MyDatabaseHelper(activity_update.this);
+                MyDatabaseHelper mydb = new MyDatabaseHelper(Activity_update.this);
 
                 String nuevaMarca = Marca2.getSelectedItem().toString().trim();
                 String nuevoTipo = Tipo2.getText().toString().trim();
@@ -102,7 +100,7 @@ public class activity_update extends AppCompatActivity {
                     dia=c.get(Calendar.DAY_OF_MONTH);
                     mes=c.get(Calendar.MONTH);
                     anno=c.get(Calendar.YEAR);
-                    DatePickerDialog datePickerDialog = new DatePickerDialog(activity_update.this, new DatePickerDialog.OnDateSetListener() {
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(Activity_update.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                             Caducidad2.setText(dayOfMonth+"/"+ (month+1)+"/"+year);
@@ -140,7 +138,7 @@ public class activity_update extends AppCompatActivity {
         builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                MyDatabaseHelper mydb = new MyDatabaseHelper(activity_update.this);
+                MyDatabaseHelper mydb = new MyDatabaseHelper(Activity_update.this);
                 mydb.BorrarDatos(originalID);
                 finish();
             }

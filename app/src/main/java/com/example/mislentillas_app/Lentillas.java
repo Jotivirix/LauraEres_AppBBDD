@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class lentillas extends AppCompatActivity {
+public class Lentillas extends AppCompatActivity {
     EditText Caducidad, Graduacion;
     TextView Tipo;
     Spinner Marca;
@@ -47,7 +47,7 @@ public class lentillas extends AppCompatActivity {
                     mes=c.get(Calendar.MONTH);
                     anno=c.get(Calendar.YEAR);
                     //A partir de los strings que hemos creado cogemos el año , dia y mes y con el datepickerdialagog lo almacenamos
-                    DatePickerDialog datePickerDialog = new DatePickerDialog(lentillas.this, new DatePickerDialog.OnDateSetListener() {
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(Lentillas.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         //creamos un metodo para añadir a caducidad los datos obtenidos del calendario
                         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -89,7 +89,7 @@ public class lentillas extends AppCompatActivity {
         aceptar_boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper mydb = new MyDatabaseHelper(lentillas.this);
+                MyDatabaseHelper mydb = new MyDatabaseHelper(Lentillas.this);
                 mydb.addDatos( Marca.getSelectedItem().toString().trim(),Tipo.getText().toString().trim(), Caducidad.getText().toString().trim(),Graduacion.getText().toString().trim());
                 finish();
 
