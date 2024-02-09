@@ -10,11 +10,11 @@
         android:id="@+id/tipoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Opcion selecionada:"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
@@ -32,43 +32,38 @@
     <TextView
         android:id="@+id/titulo2"
         android:layout_width="404dp"
-        android:layout_height="744dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
         android:text="Datos"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="@+id/toolbar3"
+        tools:layout_editor_absoluteX="3dp" />
 
     <EditText
         android:id="@+id/caducidad2"
-        android:layout_width="284dp"
-        android:layout_height="43dp"
+        android:layout_width="238dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Caducidad"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintTop_toBottomOf="@+id/tipoLabel" />
 
     <EditText
         android:id="@+id/graduacion2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
+        android:layout_width="379dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Graduacion"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintTop_toBottomOf="@+id/fecha2" />
 
     <Button
         android:id="@+id/editar"
@@ -105,40 +100,31 @@
         android:id="@+id/marca2"
         android:layout_width="409dp"
         android:layout_height="36dp"
+        android:layout_marginTop="16dp"
         android:text="CooperVision"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
 
     <Button
         android:id="@+id/fecha2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="293dp"
-        android:layout_marginEnd="28dp"
         android:text="Fecha"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/caducidad2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
-
-
+        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintStart_toEndOf="@+id/caducidad2"
+        app:layout_constraintTop_toTopOf="@+id/caducidad2" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
         android:layout_width="389dp"
         android:layout_height="155dp"
-        android:layout_marginTop="192dp"
         android:defaultFocusHighlightEnabled="@+id/diariaButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/marca2">
 
         <RadioButton
             android:id="@+id/diaria2Button"

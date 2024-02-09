@@ -43,7 +43,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull CustomAdapter.MyViewHolder holder, int position) {
-
         holder.ID.setText(String.valueOf(ID.get(position)));
         holder.Marca_txt.setText(String.valueOf(Marca.get(position)));
         holder.Tipo_txt.setText(String.valueOf(Tipo.get(position)));
@@ -55,15 +54,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
             //cuando cliquemos en los datos nos dejara modificarlos a los nuevos
             public void onClick(View v) {
-                ;
                 Intent intent = new Intent(context, Activity_update.class);
                 intent.putExtra("ID", String.valueOf(ID.get(position)));
                 intent.putExtra("Marca", String.valueOf(Marca.get(position)));
                 intent.putExtra("Tipo", String.valueOf(Tipo.get(position)));
                 intent.putExtra("Caducidad", String.valueOf(Caducidad.get(position)));
                 intent.putExtra("Graduacion", String.valueOf(Graduacion.get(position)));
-                activity.startActivityForResult(intent, 1);
-
+                context.startActivity(intent);
             }
         });
     }
